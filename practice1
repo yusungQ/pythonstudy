@@ -1,0 +1,22 @@
+대소문자 바꿔서 출력하기
+
+str = input()
+li = ''
+for i in str:
+    if i.isupper():
+        li += i.lower()
+    else:
+        li += i.upper()
+        
+print(li)
+
+
+특수문자 출력하기
+
+print(r'!@#$%^&*(\'"<>?:;')
+
+덧셈식 출력하기
+
+a, b = map(int, input().strip().split(' '))
+print(f'{a} + {b} = {a+b}')
+
