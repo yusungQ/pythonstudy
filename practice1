@@ -20,3 +20,55 @@ print(r'!@#$%^&*(\'"<>?:;')
 a, b = map(int, input().strip().split(' '))
 print(f'{a} + {b} = {a+b}')
 
+
+문자열 돌리기
+
+for i in range(len(str)):
+    print(str[i])
+
+홀짝 구분하기
+
+n = int(input())
+
+if n % 2 == 0:
+    print(f'{n} is even')
+    
+else:
+    print(f'{n} is odd')
+
+문자열 겹쳐쓰기
+
+def solution(my_string, overwrite_string, s):
+    answer = ''
+    
+    for i in range(s):
+        answer += my_string[i]
+        
+    for j in range(len(overwrite_string)):
+        answer += overwrite_string[j]
+        
+    for k in range(len(overwrite_string)+s, len(my_string)):
+        answer += my_string[k]
+    
+    return answer
+
+def solution(my_string, overwrite_string, s):
+    return my_string[:s] + overwrite_string + my_string[s + len(overwrite_string):]
+
+
+문자열 섞기
+
+def solution(str1, str2):
+    str3 = str1 + str2
+    answer = ''
+    
+    for i in range(len(str3)):
+        x = int(i/2)
+        y = int((i-1)/2)
+    
+        if i % 2 == 0:
+            answer += str1[x]
+        else:
+            answer += str2[y]
+        
+    return answer
