@@ -72,3 +72,103 @@ def solution(str1, str2):
             answer += str2[y]
         
     return answer
+
+
+문자 리스트를 문자열로 변환하기
+
+def solution(arr):
+    answer = ''
+    
+    answer = ''.join(arr)
+    
+    return answer
+
+
+더 크게 합치기
+
+def solution(a, b):
+    answer = 0
+    
+    c = str(a)
+    d = str(b)
+    
+    e = c + d
+    answer1 = int(e)
+    
+    x = str(b)
+    y = str(a)
+    
+    z = x + y
+    answer2 = int(z)
+    
+    if answer1 > answer2:
+        return answer1
+    
+    else:
+        return answer2
+
+def solution(a, b):
+    a, b = str(a), str(b)
+    return int(max(a+b, b+a))
+
+
+두 수의 연산값 비교하기
+
+def solution(a, b):
+    c, d = str(a), str(b)
+    return max(int(c+d), 2*a*b)
+
+
+홀짝에 따라 다른 값 반환하기
+
+def solution(n):
+    if n%2:
+        return sum(range(1,n+1,2))
+    return sum([i*i for i in range(2,n+1,2)])
+
+
+조건 문자열
+
+def solution(ineq, eq, n, m):
+    
+    if (ineq == '<') & (eq == '='):
+        if (n <= m):
+            return 1
+        else:
+            return 0
+        
+    if (ineq == '>') & (eq == '='):
+        if (n >= m):
+            return 1
+        else:
+            return 0
+        
+    if (ineq == '<') & (eq == '!'):
+        if (n < m):
+            return 1
+        else:
+            return 0
+        
+    if (ineq == '>') & (eq == '!'):
+        if (n > m):
+            return 1
+        else:
+            return 0
+
+def solution(ineq, eq, n, m):
+    if eq == '!':
+        eq = ''
+    return int(eval(f'{n} {ineq}{eq} {m}'))
+
+
+flag에 따라 다른 값 반환하기
+
+def solution(a, b, flag):
+
+    if flag == True:
+        return a + b
+    
+    if flag == False:
+        return a - b
+
+
